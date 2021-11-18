@@ -7,14 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.to_do_list_app.data.DataTask
 import com.example.to_do_list_app.data.taskitem
 import com.example.to_do_list_app.databinding.FragmentFirstpagefortakBinding
-
+import com.example.to_do_list_app.model.TaskViewModel
 
 
 class Firstpagefortak : Fragment() {
+    val sharedviemodel: TaskViewModel by activityViewModels()
 
     private var binding: FragmentFirstpagefortakBinding? = null
  //   private val sharedViewModel: ViewModel by activityViewModels()
@@ -47,17 +49,11 @@ class Firstpagefortak : Fragment() {
 
 
             binding?.addTasks?.setOnClickListener {
-//            val title = taskTittel.text.toString()
-//            val category = categoryDISCRIPTION.text.toString()
-//            val Location = Location.text.toString()
-//            val Description = Description.text.toString()
-//            val Time= Time.text.toString()
-//            val Data = Data.text.toString()
-//            tasklist = listOf(DataTask(title, category, Location, Description, Data, Time))
+////////
 
 var action=FirstpagefortakDirections.actionFirstpagefortakToAddNewTask()
                 findNavController().navigate(action)
-
+            //test button
            //Toast.makeText(context, "here", Toast.LENGTH_SHORT).show()
             }
         //var listoftask = tasklist
@@ -69,10 +65,17 @@ var action=FirstpagefortakDirections.actionFirstpagefortakToAddNewTask()
         // to do model data class
         //to do model2 latinaite
 
-
+        binding?.apply {
+            lifecycleOwner=viewLifecycleOwner
+            viewModel = sharedviemodel
+            fragmentAddNewTas = this@Firstpagefortak
+        }
 
         }
 
+    fun deteails(){
+        findNavController().navigate(R.id.action_firstpagefortak_to_task_Deteails)
+    }
 
 
 }

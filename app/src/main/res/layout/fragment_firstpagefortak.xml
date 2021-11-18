@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
    >
 
-<!--    <data>-->
-<!--        <variable-->
-<!--            name="startFragment"-->
-<!--            type="com.example.to_do_list_app.firstpagefortak" />-->
-<!--    </data>-->
-
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.to_do_list_app.model.TaskViewModel" />
+        <variable
+            name="fragmentAddNewTas"
+            type="com.example.to_do_list_app.Firstpagefortak" />
+    </data>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@color/lightpurpul"
         android:layout_height="match_parent"
+        android:background="@color/lightpurpul"
         android:visibility="visible"
         tools:context=".Firstpagefortak">
 
@@ -30,8 +32,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
 

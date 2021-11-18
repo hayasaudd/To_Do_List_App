@@ -21,4 +21,5 @@
     <string name="do_my_homework">do_my_homework</string>
     <string name="education">education</string>
     <string name="in_library">in_library</string>
+    <string name="edit_task">Edit Task</string>
 </resources>
