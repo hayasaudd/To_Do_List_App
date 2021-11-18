@@ -7,11 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.to_do_list_app.data.DataTask
 
-import org.w3c.dom.Text
-import java.nio.file.Files.size
-
-class taskAdapter(var list: List<DataTask>
-): RecyclerView.Adapter<taskAdapter.itemViewHolder>() {
+class TaskAdapter(var list: List<DataTask>
+): RecyclerView.Adapter<TaskAdapter.itemViewHolder>() {
 
     class itemViewHolder(view: View): RecyclerView.ViewHolder(view){
         val tasktittel: TextView = view.findViewById(R.id.task)

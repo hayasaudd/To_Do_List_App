@@ -9,7 +9,12 @@
         <entry key="app/src/main/res/drawable/addtaskicon.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/cardoflist.xml" value="0.19311712061647746" />
+        <entry key="app/src/main/res/layout/creat_new_task.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/layout/fragment_add__new__task.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_add_new_task.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_edit__task.xml" value="0.2037037037037037" />
         <entry key="app/src/main/res/layout/fragment_firstpagefortak.xml" value="0.10740740740740741" />
+        <entry key="app/src/main/res/layout/fragment_task__deteails.xml" value="0.2037037037037037" />
         <entry key="app/src/main/res/layout/recyclerview.xml" value="0.1" />
       </map>
     </option>

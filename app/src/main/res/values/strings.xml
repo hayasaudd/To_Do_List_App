@@ -2,4 +2,23 @@
     <string name="app_name">To_Do_List_App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="task_tittel">task_tittel</string>
+    <string name="category">Category:</string>
+    <string name="meeting">meeting</string>
+    <string name="sport">sport</string>
+    <string name="eduction">eduction</string>
+    <string name="friends">friends</string>
+    <string name="shopping">shopping</string>
+    <string name="daily">daily</string>
+    <string name="location">location</string>
+    <string name="more_deteails">more_deteails</string>
+    <string name="done">done</string>
+    <string name="cancel">cancel</string>
+    <string name="add_task">add_task</string>
+    <string name="task_added">task_added</string>
+    <string name="time_of_task">Time Of Task</string>
+    <string name="date">Date</string>
+    <string name="do_my_homework">do_my_homework</string>
+    <string name="education">education</string>
+    <string name="in_library">in_library</string>
 </resources>

@@ -1,38 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".MainActivity">
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:id="@+id/card"
-        app:cardBackgroundColor="#FFFF"
-        app:cardCornerRadius="2dp"
-        app:contentPadding="16dp"
-        android:layout_margin="16dp"
-        android:foreground="?selectableItemBackground"
-        android:clickable="true"
-        >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Task_Deteails">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="364dp"
-            android:layout_height="150dp"
+            android:layout_width="390dp"
+            android:layout_height="match_parent"
             android:visibility="visible">
 
 
             <TextView
-                android:id="@+id/task"
+                android:id="@+id/taskSummary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="1.5dp"
-                android:text="do my homework"
+                android:text="@string/do_my_homework"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -40,53 +31,61 @@
 
 
             <TextView
-                android:id="@+id/category"
+                android:id="@+id/categorySummary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
-                android:text="Education"
+                android:text="@string/education"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/location"
+                android:id="@+id/locationSummary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
                 android:src="@drawable/location"
-                android:text="in library "
+                android:text="@string/in_library"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/category" />
-
+                app:layout_constraintTop_toBottomOf="@id/categorySummary" />
 
             <ImageButton
-                android:id="@+id/deletTask"
+                android:id="@+id/deletTaskSummary"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="28dp"
-                android:layout_marginEnd="28dp"
+                android:layout_marginEnd="9dp"
                 android:background="#77F8F6F6"
-                android:clickable="true"
                 android:src="@drawable/deleticon"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.992"
-                app:layout_constraintStart_toEndOf="@+id/location"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton"
+                app:layout_constraintTop_toBottomOf="@+id/locationSummary"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/addTskSummary"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#75FFFFFF"
+                android:paddingEnd="1.5dp"
+                android:src="@drawable/add_task_ion"
+                app:layout_constraintEnd_toStartOf="@+id/deletTaskSummary"
+                app:layout_constraintHorizontal_bias="0.925"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationSummary"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/radioButtonSummary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="9dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.905"
-                app:layout_constraintStart_toEndOf="@+id/task"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/taskSummary"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </com.google.android.material.card.MaterialCardView>
-</FrameLayout>
+    </FrameLayout>
+</layout>
