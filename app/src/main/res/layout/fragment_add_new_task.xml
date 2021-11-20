@@ -11,141 +11,171 @@
             name="fragmentadd"
             type="com.example.to_do_list_app.Add_New_Task" />
     </data>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="605dp"
-            android:visibility="visible"
-            tools:context=".Add_New_Task"
-            android:id="@+id/addconst">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addconst"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/_dbcc03cb2598b31185d98a0905512d4"
+        android:visibility="visible"
+        tools:context=".Add_New_Task">
 
 
-            <EditText
-                android:id="@+id/taskTittel"
+        <EditText
+            android:id="@+id/taskTittel"
+            android:layout_width="222dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="75dp"
+            android:hint="@string/task"
+            android:text="@={viewModel.taskTittel}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/categoryDISCRIPTION"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/category"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/taskTittel" />
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/TypeOfTask"
+            android:layout_width="268dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.664"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categoryDISCRIPTION">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/meeting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/task_tittel"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:text="@string/meeting"
+                app:chipBackgroundColor="#6A00897B" />
 
-            <TextView
-                android:id="@+id/categoryDISCRIPTION"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Sport"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/category"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/taskTittel" />
+                android:text="@string/sport"
+                app:chipBackgroundColor="#5C43A047" />
 
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/TypeOfTask"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/categoryDISCRIPTION">
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/meeting"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/meeting"
-                    app:chipBackgroundColor="#6A00897B" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/Sport"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sport"
-                    app:chipBackgroundColor="#5C43A047" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/Eduction"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/eduction"
-                    app:chipBackgroundColor="#653949AB" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/Friends"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/friends"
-                    app:chipBackgroundColor="#658E24AA" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/Shopping"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/shopping"
-                    app:chipBackgroundColor="#66C0CA33" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/Daily"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/daily"
-                    app:chipBackgroundColor="#5B039BE5" />
-            </com.google.android.material.chip.ChipGroup>
-
-
-            <EditText
-                android:id="@+id/Location"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Eduction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:minHeight="48dp"
-                android:text="@string/location"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TypeOfTask" />
+                android:text="@string/eduction"
+                app:chipBackgroundColor="#653949AB" />
 
-            <EditText
-                android:id="@+id/Description"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Friends"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/more_deteails"
-                android:minHeight="48dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Location" />
+                android:text="@string/friends"
+                app:chipBackgroundColor="#658E24AA" />
 
-            <EditText
-                android:id="@+id/Time"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Shopping"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/time_of_task"
-                android:minHeight="48dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Description" />
+                android:text="@string/shopping"
+                app:chipBackgroundColor="#66C0CA33" />
 
-            <EditText
-                android:id="@+id/Data"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Daily"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/date"
-                android:minHeight="48dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Time" />
+                android:text="@string/daily"
+                app:chipBackgroundColor="#5B039BE5" />
+        </com.google.android.material.chip.ChipGroup>
 
-            <Button
-                android:id="@+id/AddTaskButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#6F3949AB"
-                android:text="@string/done"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Data"
-              />
 
-            <Button
-                android:id="@+id/CancelButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:background="#703949AB"
-                android:text="@string/cancel"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/AddTaskButton"
-                app:layout_constraintTop_toBottomOf="@id/Data"
-                android:onClick="@{() -> fragmentadd.addtask()}"/>
+        <EditText
+            android:id="@+id/Location"
+            android:layout_width="222dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/location"
+            android:minHeight="48dp"
+            android:text="@={viewModel.location}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TypeOfTask" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/Description"
+            android:layout_width="222dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/discribtion"
+            android:minHeight="48dp"
+            android:text="@={viewModel.description}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Location" />
+
+        <EditText
+            android:id="@+id/Time"
+            android:layout_width="222dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/time"
+            android:inputType="time"
+            android:minHeight="48dp"
+            android:text="@={viewModel.time}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Description" />
+
+        <EditText
+            android:id="@+id/Data"
+            android:layout_width="222dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/date"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:text="@={viewModel.data}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Time" />
+
+        <Button
+            android:id="@+id/AddTaskButton"
+            android:layout_width="226dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="70dp"
+            android:background="#6F3949AB"
+            android:onClick="@{() ->viewModel.addtask()}"
+            android:text="@string/done"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Data" />
+
+        <Button
+            android:id="@+id/CancelButton"
+            android:layout_width="226dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="#703949AB"
+            android:text="@string/cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AddTaskButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </layout>

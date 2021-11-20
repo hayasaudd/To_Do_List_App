@@ -31,7 +31,7 @@
             android:layout_margin="16dp"
             android:foreground="?selectableItemBackground"
             android:clickable="true"
-            android:onClick="@{() -> card.deteails()}">
+            android:focusable="true">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,20 +44,21 @@
                     android:id="@+id/task"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="1.5dp"
+                    android:layout_marginStart="16dp"
                     android:text="do my homework"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
                 <TextView
                     android:id="@+id/category"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginTop="48dp"
                     android:text="Education"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.129"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,12 +66,12 @@
                     android:id="@+id/location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="44dp"
                     android:layout_marginTop="36dp"
                     android:src="@drawable/location"
                     android:text="in library "
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/category" />
-
 
                 <ImageButton
                     android:id="@+id/deletTask"

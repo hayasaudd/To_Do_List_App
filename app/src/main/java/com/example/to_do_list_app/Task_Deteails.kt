@@ -24,10 +24,10 @@ class Task_Deteails : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentTaskDeteailsBinding.inflate(inflater,container, false)
+        binding = FragmentTaskDeteailsBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding!!.root
-    }
+            }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -37,13 +37,10 @@ class Task_Deteails : Fragment() {
             viewModel = sharedviemodel
             fragmentdeteils = this@Task_Deteails
         }
-        fun goToEditPage(){
-            findNavController().navigate(R.id.action_task_Deteails_to_edit_Task)
-        }
-
     }
 
-
+    fun goToEditPage(){
+        findNavController().navigate(R.id.action_task_Deteails_to_edit_Task) }
 
 
 }

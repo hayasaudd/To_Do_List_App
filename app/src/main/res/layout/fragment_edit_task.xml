@@ -7,7 +7,7 @@
             name="viewModel"
             type="com.example.to_do_list_app.model.TaskViewModel" />
         <variable
-            name="FragmentAddNewTas"
+            name="fragmentAddNewTas"
             type="com.example.to_do_list_app.Edit_Task" />
     </data>
 
@@ -19,6 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="605dp"
+            android:background="@drawable/_edit"
             android:visibility="visible">
 
 
@@ -26,7 +27,9 @@
                 android:id="@+id/taskTittelEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="144dp"
                 android:text="@string/task_tittel"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,16 +37,19 @@
                 android:id="@+id/categoryDISCRIPTIONEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="@string/category"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/taskTittelEdit" />
+
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/TypeOfTaskEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/categoryDISCRIPTIONEdit">
+                tools:layout_editor_absoluteY="245dp">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/meetingEdit"
@@ -88,14 +94,14 @@
                     app:chipBackgroundColor="#5B039BE5" />
             </com.google.android.material.chip.ChipGroup>
 
-
             <EditText
                 android:id="@+id/LocationEdit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@+id/TypeOfTaskEdit"
+                android:layout_width="222dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="16dp"
                 android:minHeight="48dp"
                 android:text="@string/location"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/TypeOfTaskEdit" />
 
@@ -103,30 +109,35 @@
                 android:id="@+id/DescriptionEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:hint="@string/more_deteails"
                 android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/LocationEdit" />
+                app:layout_constraintTop_toBottomOf="@+id/LocationEdit" />
 
             <Button
                 android:id="@+id/DoneButtonEdit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="222dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="32dp"
                 android:background="#6F3949AB"
                 android:text="@string/done"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/DescriptionEdit" />
 
             <Button
                 android:id="@+id/CancelButtonEdit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
+                android:layout_width="222dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="92dp"
+                android:layout_marginTop="16dp"
                 android:background="#703949AB"
                 android:text="@string/cancel"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/DoneButtonEdit"
-                app:layout_constraintTop_toBottomOf="@id/DescriptionEdit" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DoneButtonEdit" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

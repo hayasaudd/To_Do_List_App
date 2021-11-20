@@ -22,4 +22,9 @@
     <string name="education">education</string>
     <string name="in_library">in_library</string>
     <string name="edit_task">Edit Task</string>
+    <string name="add">Add</string>
+    <string name="task">task</string>
+    <string name="edit">edit</string>
+    <string name="discribtion">discribtion</string>
+    <string name="time">Time</string>
 </resources>

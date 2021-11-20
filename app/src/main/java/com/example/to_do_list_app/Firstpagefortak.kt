@@ -10,24 +10,21 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.to_do_list_app.data.DataTask
-import com.example.to_do_list_app.data.taskitem
+import com.example.to_do_list_app.data.TaskitemSource
 import com.example.to_do_list_app.databinding.FragmentFirstpagefortakBinding
 import com.example.to_do_list_app.model.TaskViewModel
 
 
 class Firstpagefortak : Fragment() {
     val sharedviemodel: TaskViewModel by activityViewModels()
-
-    private var binding: FragmentFirstpagefortakBinding? = null
+var dataset=TaskitemSource().getTasks()
+     var binding: FragmentFirstpagefortakBinding? = null
  //   private val sharedViewModel: ViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
         super.onCreate(savedInstanceState)
-
     }
-         // private  var binding: FragmentFirstpagefortakBinding? = null
+
 
 
     override fun onCreateView(
@@ -35,8 +32,7 @@ class Firstpagefortak : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
          binding= DataBindingUtil.inflate(inflater, R.layout.fragment_firstpagefortak,container, false)
-        // val fragmentBing = FragmentFirstpagefortakBinding.inflate(inflater, container, false) //  binding = fragmentBing // var listoftask = taskitem.getAll() // binding.getStartFragment().adapter //  binding.recyclerview.adapter = taskAdapter(listoftask) //return inflater.inflate(R.layout.fragment_firstpagefortak, container, false)
-        return binding!!.root
+         return binding!!.root
     }
 
 
@@ -46,36 +42,30 @@ class Firstpagefortak : Fragment() {
         lateinit var tasklist : List<DataTask>
         Toast.makeText(context, "here", Toast.LENGTH_SHORT).show()
 
-
-
             binding?.addTasks?.setOnClickListener {
-////////
 
-var action=FirstpagefortakDirections.actionFirstpagefortakToAddNewTask()
-                findNavController().navigate(action)
-            //test button
-           //Toast.makeText(context, "here", Toast.LENGTH_SHORT).show()
+                 var action=FirstpagefortakDirections.actionFirstpagefortakToAddNewTask()
+                  findNavController().navigate(action)
+
             }
-        //var listoftask = tasklist
 
-        // view.recycler_view.layoutManager = LinearLayoutManager(activity)
 
-     binding?.recyclerView?.adapter =TaskAdapter(taskitem.getAll())
+     binding?.recyclerView?.adapter =TaskAdapter(dataset)
 
         // to do model data class
         //to do model2 latinaite
 
-        binding?.apply {
-            lifecycleOwner=viewLifecycleOwner
-            viewModel = sharedviemodel
-            fragmentAddNewTas = this@Firstpagefortak
-        }
+//        binding?.apply {
+//            lifecycleOwner=viewLifecycleOwner
+//            viewModel = sharedviemodel
+//            fragmentAddNewTas = this@Firstpagefortak
+//        }
 
         }
 
-    fun deteails(){
-        findNavController().navigate(R.id.action_firstpagefortak_to_task_Deteails)
+//    fun deteails(){
+//        findNavController().navigate(R.id.action_task_Deteails_to_firstpagefortak)
+
     }
 
 
-}
