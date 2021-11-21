@@ -36,6 +36,7 @@
                 android:id="@+id/categorySummary"
                 android:layout_width="193dp"
                 android:layout_height="54dp"
+                android:text="@={viewModel.time}"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -47,21 +48,34 @@
                 android:layout_height="54dp"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/location"
-                android:text="@={viewModel.location}"
+                android:text="@={viewModel.data}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.509"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/categorySummary" />
 
             <TextView
-                 android:id="@+id/ddddd"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_marginTop="36dp"
-                 android:src="@drawable/location"
-                 android:text="@={viewModel.location}"
-                 app:layout_constraintStart_toStartOf="parent"
-                 app:layout_constraintTop_toBottomOf="@id/categorySummary" />
+                android:id="@+id/ddddd"
+                android:layout_width="193dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/location"
+                android:text="@={viewModel.location}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.509"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationSummary" />
+            <TextView
+                android:id="@+id/Description"
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/location"
+                android:text="@={viewModel.description}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.509"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationSummary" />
 
             <Button
                 android:id="@+id/EditButton"

@@ -24,6 +24,8 @@ class TaskAdapter(var list: MutableList<DataTask>)
         val tasklocation: TextView = view.findViewById(R.id.location)
         val card:CardView=view.findViewById(R.id.card)
         val delet: ImageButton = view.findViewById(R.id.deletTask)
+        val date1: TextView = view.findViewById(R.id.Date)
+        val time1: TextView = view.findViewById(R.id.Time)
 //        val edit: Button = view.findViewById(R.id.EditButton)
     }
 
@@ -38,7 +40,8 @@ class TaskAdapter(var list: MutableList<DataTask>)
         holder.tasktittel.text= dataitem.taskTittel
         holder.categorytask.text= dataitem.description
         holder.tasklocation.text= dataitem.location
-
+        holder.date1.text= dataitem.date
+        holder.time1.text= dataitem.taim
         holder.card.setOnClickListener {
             var action =FirstpagefortakDirections.actionFirstpagefortakToTaskDeteails(position)
             holder.itemView.findNavController().navigate(action)
