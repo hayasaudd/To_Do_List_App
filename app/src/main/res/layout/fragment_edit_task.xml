@@ -55,6 +55,7 @@
                     android:id="@+id/meetingEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:text="@string/meeting"
                     app:chipBackgroundColor="#6A00897B" />
 
@@ -62,6 +63,7 @@
                     android:id="@+id/SportEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:text="@string/sport"
                     app:chipBackgroundColor="#5C43A047" />
 
@@ -69,6 +71,7 @@
                     android:id="@+id/EductionEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:text="@string/eduction"
                     app:chipBackgroundColor="#653949AB" />
 
@@ -76,6 +79,7 @@
                     android:id="@+id/FriendsEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:text="@string/friends"
                     app:chipBackgroundColor="#658E24AA" />
 
@@ -83,6 +87,7 @@
                     android:id="@+id/ShoppingEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:text="@string/shopping"
                     app:chipBackgroundColor="#66C0CA33" />
 
@@ -90,6 +95,7 @@
                     android:id="@+id/DailyEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:text="@string/daily"
                     app:chipBackgroundColor="#5B039BE5" />
             </com.google.android.material.chip.ChipGroup>

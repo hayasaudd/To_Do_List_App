@@ -57,6 +57,7 @@
                 android:id="@+id/meeting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="@string/meeting"
                 app:chipBackgroundColor="#6A00897B" />
 
@@ -64,6 +65,7 @@
                 android:id="@+id/Sport"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="@string/sport"
                 app:chipBackgroundColor="#5C43A047" />
 
@@ -71,6 +73,7 @@
                 android:id="@+id/Eduction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="@string/eduction"
                 app:chipBackgroundColor="#653949AB" />
 
