@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_gragh"
+    app:startDestination="@id/Firstpagefortak">
+
+    <fragment
+        android:id="@+id/Firstpagefortak"
+        android:name="com.example.to_do_list_app.Firstpagefortak"
+        android:label="firstpagefortak" >
+        <action
+            android:id="@+id/action_firstpagefortak_to_add_New_Task"
+            app:destination="@id/add_New_Task" />
+        <action
+            android:id="@+id/action_firstpagefortak_to_task_Deteails"
+            app:destination="@id/task_Deteails" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_New_Task"
+        android:name="com.example.to_do_list_app.Add_New_Task"
+        android:label="Add_New_Task" >
+        <action
+            android:id="@+id/action_add_New_Task_to_firstpagefortak"
+            app:destination="@id/Firstpagefortak" />
+    </fragment>
+    <fragment
+        android:id="@+id/task_Deteails"
+        android:name="com.example.to_do_list_app.Task_Deteails"
+        android:label="Task_Deteails" >
+        <action
+            android:id="@+id/action_task_Deteails_to_edit_Task"
+            app:destination="@id/edit_Task" />
+        <action
+            android:id="@+id/action_task_Deteails_to_firstpagefortak"
+            app:destination="@id/Firstpagefortak" />
+        <argument
+            android:name="postion"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_Task"
+        android:name="com.example.to_do_list_app.Edit_Task"
+        android:label="Edit_Task" >
+        <action
+            android:id="@+id/action_edit_Task_to_firstpagefortak"
+            app:destination="@id/Firstpagefortak" />
+        <argument
+            android:name="tittle"
+            app:argType="string" />
+    </fragment>
+</navigation>
