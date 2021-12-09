@@ -40,6 +40,10 @@ class Add_New_Task : Fragment(R.layout.fragment_add_new_task) {
             viewModel = sharedviemodel
             fragmentadd = this@Add_New_Task
         }
+        binding?.AddTaskButton?.setOnClickListener{
+            sharedviemodel.addtask()
+            Navigation.findNavController(view).navigate(R.id.action_add_New_Task_to_firstpagefortak)
+        }
 
     }
 }
